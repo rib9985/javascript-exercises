@@ -10,7 +10,26 @@ Create a function that determines whether or not a given year is a leap year. Le
 leapYears(2000) // is a leap year: returns true
 leapYears(1985) // is not a leap year: returns false
 ```
+## Solution
+- Define and store function parameter
+- Define conditions:
+    - Year divisible by 400 -> Leap Year -> Truthy
+    - Year divisible by 4 AND not by 100 -> Leap Year -> Truthy
+    - Else: not leap year -> Falsey
+- Return each condition
 
+## Code
+```js
+const leapYears = function(x) {
+    
+    const year = x
+    if (year % 400 ==0){return true};
+    if (((year % 4 == 0) && (year % 100 !== 0))){return true};
+    return false
+
+};
+
+```
 
 ## Hints
 - use an `if` statement and `&&` to make sure all the conditions are met properly
