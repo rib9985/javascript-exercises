@@ -6,6 +6,42 @@ Implement a function that takes 2 integers and returns the sum of every number b
 sumAll(1, 4) // returns the sum of 1 + 2 + 3 + 4 which is 10
 ```
 
+## Solution: 
+- Define parameters in function 
+- Check if parameters are integers greater than zero or not equal to number data type. If so, return ERROR.
+- Else, check which parameters is larger. Input parameters into function loopParameters and return.
+    - For loopParameters: sum each iteration with the last iteration, one by one, until it reaches the end of loopLength. 
+
+
+## Code: 
+```js
+const sumAll = function(x,y) {
+
+if ((x<0||y<0) || 
+((typeof x != typeof 1)
+||(typeof y != typeof 1))){
+    return 'ERROR'
+} 
+
+else {
+    if (x>y) {return loopParameters(x,y)}
+    else if (y>x) {return loopParameters(y,x)}
+      
+
+        function loopParameters(initialPara, finalPara){
+            let finalSum = 0
+            let loopLength = (initialPara-finalPara)
+            for (let i = 0; i<= loopLength; i++){
+                finalSum += finalPara + i;
+            } 
+        return finalSum}
+}
+    
+}
+
+```
+
+
 
 ## Hints
 
