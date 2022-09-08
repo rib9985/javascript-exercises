@@ -7,12 +7,16 @@ return a - b
 	
 };
 
-const sum = function(a,b) {
-  return a + b
+const sum = function(array) {
+return array.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+
 };
 
-const multiply = function(a,b) {
- return a * b
+const multiply = function(array) {
+  
+return array.reduce((accumulate,nextItem) => 
+accumulate * nextItem)
+
 };
 
 const power = function(a,b) {
@@ -28,8 +32,6 @@ for (let i = 1; i<=store; i++){
 }
 return total
 }
-// 5*4*3*2*1
-
 
 // Do not edit below this line
 module.exports = {
